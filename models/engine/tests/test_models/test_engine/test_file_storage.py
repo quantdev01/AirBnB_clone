@@ -21,7 +21,7 @@ class test_fileStorage(unittest.TestCase):
         """ Will Remove storage file at end of tests """
         try:
             os.remove('file.json')
-        except:
+        except:  # noqa
             pass
 
     def test_obj_list_empty(self):
@@ -106,4 +106,4 @@ class test_fileStorage(unittest.TestCase):
         """ This is the File Storage object for created storage """
         from models.engine.file_storage import FileStorage
         print(type(storage))
-        self.assertEqual(type(storage), FileStorage
+        self.assertEqual(type(storage), FileStorage)
