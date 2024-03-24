@@ -74,7 +74,7 @@ class HBNBCommand(cmd.Cmd):
                 if pline:
                     # check for *args or **kwargs
                     if pline[0] == '{' and pline[-1] == '}'\
-                            and type(eval(pline)) is dict:
+                            and isinstance(eval(pline), dict):
                         _args = pline
                     else:
                         _args = pline.replace(',', '')
@@ -264,7 +264,8 @@ class HBNBCommand(cmd.Cmd):
             return
 
         # first determine if kwargs or args
-        if '{' in args[2] and '}' in args[2] and type(eval(args[2])) is dict:
+        if '{' in args[2] and '}' in args[2] and\
+                isinstance(eval(args[2]), dict):
             kwargs = eval(args[2])
             args = []  # reformat kwargs into list, ex: [<name>, <value>, ...]
             for k, v in kwargs.items():
