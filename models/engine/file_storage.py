@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" module that defines a class that will manage file storage for the hbnb clone"""
+"""
+module that defines a class that will
+manage file storage for the hbnb clone
+"""
 import json
 
 
@@ -45,6 +48,3 @@ class FileStorage:
             with open(FileStorage.__file_path, 'r') as f:
                 temp = json.load(f)
                 for key, val in temp.items():
-                        self.all()[key] = classes[val['__class__']](**val)
-        except FileNotFoundError:
-            pass
