@@ -21,7 +21,7 @@ class test_fileStorage(unittest.TestCase):
         """ Kindly Remove storage file at end of tests """
         try:
             os.remove('file.json')
-        except:  # noqa
+        except Exception as e:
             pass
 
     def test_obj_list_empty(self):
