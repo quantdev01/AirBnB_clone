@@ -20,24 +20,27 @@ button{
     margin-top: 10px;
 
 }
-button:hoer{
+button:hover{
     opacity: 90%;
 }
 
 .locations {
-    padding-left: 40px;
     height: 100%;
     width: 25%;
     border-right: 1px solid #DDDDDD;
     float: left;
 }
 
-
 .amenities{
-    padding-left: 40px;
     height: 100%;
     width: 25%;
     float: left;
+}
+
+.amenities h3, .amenities h4,
+.locations h3, .locations h4
+{
+    padding-left: 40px;
 }
 
 .filters h3{
@@ -47,21 +50,27 @@ button:hoer{
     margin-top: 15px;
 }
 
-
 .filters h4{
     font-weight: 400;
     margin-top: 0px;
     font-size: 14px;
 }
 
-.popover {
+.popover{
+        background-color: #FAFAFA;
+        border: 1px solid #DDDDDD;
+        border-radius: 4px;
+        padding-bottom: 30px;
+        padding-left: 40px;
+        position: relative;
+        display: none;
+    }
+.popover-aminities {
     background-color: #FAFAFA;
-    width: 25%;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
-    position:relative;
     padding-bottom: 30px;
-    margin-top: 70px;
+    position: relative;
     display: none;
 }
 
@@ -70,6 +79,17 @@ button:hoer{
 }
 .popover ul li{
     list-style-type: none;
+}
+
+.popover-aminities ul li{
+    list-style-type: none;
+    
+}
+
+.amenities:hover .popover-aminities,
+.locations:hover .popover
+{
+    display: block;
 }
 
 .locations:hover .popover{
